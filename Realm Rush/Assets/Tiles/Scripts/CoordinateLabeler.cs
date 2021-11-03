@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEditor.Experimental.SceneManagement;
 
 [ExecuteAlways]
 public class CoordinateLabeler : MonoBehaviour
@@ -18,7 +19,7 @@ public class CoordinateLabeler : MonoBehaviour
 
     void Update()
     {
-        if (!Application.isPlaying)
+        if (!Application.isPlaying && PrefabStageUtility.GetPrefabStage(gameObject) == null)
         {
             DisplayCoordinates();
             UpdateObjectName();
