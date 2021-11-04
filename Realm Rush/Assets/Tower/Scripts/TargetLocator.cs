@@ -11,16 +11,33 @@ public class TargetLocator : MonoBehaviour
 
     void Start()
     {
-        target = FindObjectOfType<EnemyMover>().transform;
+        try
+        {
+            target = FindObjectOfType<EnemyMover>().transform;
+        }
+
+        catch (NullReferenceException)
+        {
+            Debug.Log("No enemy present..");
+        }
     }
 
     void Update()
     {
-        AimWeapon();
+        if (target != null)
+            AimWeapon();
+        else
+            Attack(false);
     }
 
     void AimWeapon()
     {
         weapon.LookAt(target);
+    }
+
+    void Attack(bool isEnemyPresent)
+    {
+        var emissionModule = GetComponentInChildren<ParticleSystem>().emission;
+        emissionModule.enabled = isEnemyPresent;
     }
 }
