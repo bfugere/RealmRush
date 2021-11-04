@@ -6,8 +6,9 @@ using UnityEngine;
 public class TargetLocator : MonoBehaviour
 {
     [SerializeField] Transform weapon;
+    [SerializeField] ParticleSystem projectileParticles;
     [SerializeField] float towerRange = 15f;
-    
+
     Transform target;
 
     void Update()
@@ -45,7 +46,7 @@ public class TargetLocator : MonoBehaviour
     {
         float targetDistance = Vector3.Distance(transform.position, target.position);
 
-        if (targetDistance < towerRange)
+        if (targetDistance <= towerRange)
         {
             weapon.LookAt(target);
             Attack(true);
@@ -56,7 +57,7 @@ public class TargetLocator : MonoBehaviour
 
     void Attack(bool isEnemyPresent)
     {
-        var emissionModule = GetComponentInChildren<ParticleSystem>().emission;
+        var emissionModule = projectileParticles.emission;
         emissionModule.enabled = isEnemyPresent;
     }
 }
