@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2716523174276024796, guid: f9fe7d8e2c469df4cac4d1856a8a139a, type: 3}
+      propertyPath: isPlaceable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2757937261506058941, guid: f9fe7d8e2c469df4cac4d1856a8a139a, type: 3}
       propertyPath: m_Name
       value: Tile_RoadStraight90

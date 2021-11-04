@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile_RoadStraight
       objectReference: {fileID: 0}
+    - target: {fileID: 3415412313156297457, guid: 2574b4afaa1d2f44792f39756c0ca4af, type: 3}
+      propertyPath: isPlaceable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3630213383329276919, guid: 2574b4afaa1d2f44792f39756c0ca4af, type: 3}
       propertyPath: m_RootOrder
       value: 0
