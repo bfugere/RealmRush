@@ -5,7 +5,12 @@ using TMPro;
 using System;
 using UnityEditor.Experimental.SceneManagement;
 
+// **********************************************************
+// MOVE THIS SCRIPT TO THE Editor FOLDER BEFORE BUILDING GAME
+// **********************************************************
+
 [ExecuteAlways]
+[RequireComponent(typeof(TextMeshPro))]
 public class CoordinateLabeler : MonoBehaviour
 {
     [SerializeField] Color defaultColor = Color.white;
@@ -32,7 +37,7 @@ public class CoordinateLabeler : MonoBehaviour
             UpdateObjectName();
         }
 
-        ColorCoordinates();
+        SetCoordinateLabelColor();
         ToggleLabels();
     }
 
@@ -42,7 +47,7 @@ public class CoordinateLabeler : MonoBehaviour
             label.enabled = !label.IsActive();
     }
 
-    void ColorCoordinates()
+    void SetCoordinateLabelColor()
     {
         if (waypoint.IsPlaceable)
             label.color = defaultColor;
