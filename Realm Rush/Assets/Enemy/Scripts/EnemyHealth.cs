@@ -5,10 +5,10 @@ using UnityEngine;
 [RequireComponent(typeof(Enemy))]
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] int maxHP = 5;
+    [SerializeField] int maxHP = 3;
 
     [Tooltip("This amount will be added to maxHP when the enemy dies.")]
-    [SerializeField] int difficultyRamp = 1;
+    [SerializeField] int difficultyRamp = 5;
     
     int currentHP = 0;
 

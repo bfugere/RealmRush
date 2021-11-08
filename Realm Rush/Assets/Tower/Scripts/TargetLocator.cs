@@ -7,7 +7,7 @@ public class TargetLocator : MonoBehaviour
 {
     [SerializeField] Transform weapon;
     [SerializeField] ParticleSystem projectileParticles;
-    [SerializeField] float towerRange = 15f;
+    [SerializeField] float towerRange = 30f;
 
     Transform target;
 

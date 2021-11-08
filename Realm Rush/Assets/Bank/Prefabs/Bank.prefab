@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a130398485f889499cd60fb36c447aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingBalance: 500
+  startingBalance: 300
   currentBalance: 0
   bankText: {fileID: 0}
