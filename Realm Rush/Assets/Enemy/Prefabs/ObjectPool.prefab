@@ -59,3 +59,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0954552aa143823499c2ad147ffa3cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startCoordinates: {x: 0, y: 0}
+  destinationCoordinates: {x: 9, y: 6}
